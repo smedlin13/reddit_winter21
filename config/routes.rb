@@ -28,15 +28,15 @@ root 'subs#index'
     resources :topics
   end
 
-  bad
-  resources :subs do
-    resources :topics do
-      resources :comments
-    end
-  end
+  # bad
+  # resources :subs do
+  #   resources :topics do
+  #     resources :comments
+  #   end
+  # end
   resources :topics, only: [:index, :new, :create, :show, :update, :destroy] do
     resources :comments
   end
-end
+# end
 
 end
