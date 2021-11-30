@@ -34,7 +34,7 @@ root 'subs#index'
   #     resources :comments
   #   end
   # end
-  resources :topics, only: [:index, :new, :create, :show, :update, :destroy] do
+  resources :topics, except: [:index, :new, :create, :show, :update, :destroy] do
     resources :comments
   end
 # end
